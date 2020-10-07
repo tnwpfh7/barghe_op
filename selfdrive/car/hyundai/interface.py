@@ -35,7 +35,7 @@ class CarInterface(CarInterfaceBase):
 
     if candidate in [CAR.KIA_K7]:
       tire_stiffness_factor = 0.385
-	  ret.lateralTuning.pid.kf = 0.00005
+      ret.lateralTuning.pid.kf = 0.00005
       ret.mass = 1685. + STD_CARGO_KG
       ret.wheelbase = 2.855
       ret.steerRatio = 12.72   #Spec 14.4
