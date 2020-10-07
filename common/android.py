@@ -98,6 +98,7 @@ def get_ip_address():
   if not ANDROID:
     return None
 
+
   try:
     wlan = subprocess.check_output(["ifconfig", "wlan0"], encoding='utf8').strip()
     pattern = re.compile(r'inet addr:(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})')
