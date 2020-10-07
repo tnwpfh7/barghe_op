@@ -242,7 +242,6 @@ def thermald_thread():
     msg.thermal.cpuPerc = int(round(psutil.cpu_percent()))
     msg.thermal.networkType = network_type
     msg.thermal.networkStrength = network_strength
-    msg.thermal.wifiIpAddress = wifiIpAddress
     msg.thermal.batteryPercent = get_battery_capacity()
     msg.thermal.batteryStatus = get_battery_status()
     msg.thermal.batteryCurrent = get_battery_current()
