@@ -34,13 +34,16 @@ class CarInterface(CarInterfaceBase):
     tire_stiffness_factor = 1.
 
     if candidate in [CAR.KIA_K7]:
-      ret.lateralTuning.pid.kf = 0.00006
+      tire_stiffness_factor = 0.385
+	  ret.lateralTuning.pid.kf = 0.00005
       ret.mass = 1685. + STD_CARGO_KG
       ret.wheelbase = 2.855
-      ret.steerRatio = 13.52   #Spec
-      tire_stiffness_factor = 0.385
+      ret.steerRatio = 12.72   #Spec 14.4
+      ret.steerActuatorDelay = 0.18
+      ret.steerRateCost = 0.5
+      ret.steerLimitTimer = 0.5
       ret.lateralTuning.pid.kiBP, ret.lateralTuning.pid.kpBP = [[0.], [0.]]
-      ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.25], [0.05]]
+      ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.06, 0.16], [0.03, 0.05]]
       ret.minSteerSpeed = -0 * CV.MPH_TO_MS
     elif candidate in [CAR.KIA_K7_HEV]:
       ret.lateralTuning.pid.kf = 0.00005
@@ -218,7 +221,7 @@ class CarInterface(CarInterfaceBase):
 
     # steer, gas, brake limitations VS speed
     ret.steerMaxBP = [0.]
-    ret.steerMaxV = [1.0]
+    ret.steerMaxV = [1.3]
     ret.gasMaxBP = [0.]
     ret.gasMaxV = [0.5]
     ret.brakeMaxBP = [0., 20.]
