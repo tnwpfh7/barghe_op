@@ -34,6 +34,7 @@ LEON = False
 last_eon_fan_val = None
 
 
+
 with open(BASEDIR + "/selfdrive/controls/lib/alerts_offroad.json") as json_file:
   OFFROAD_ALERTS = json.load(json_file)
 
