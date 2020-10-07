@@ -75,6 +75,7 @@ static void ui_draw_sidebar_network_type(UIState *s) {
   nvgTextBox(s->vg, network_x-20, network_y + 55, 250, s->scene.wifiIpAddress.c_str(), NULL);
 }
 
+
 static void ui_draw_sidebar_metric(UIState *s, const char* label_str, const char* value_str, const int severity, const int y_offset, const char* message_str) {
   const int metric_x = !s->scene.uilayout_sidebarcollapsed ? 30 : -(sbr_w);
   const int metric_y = 338 + y_offset;
