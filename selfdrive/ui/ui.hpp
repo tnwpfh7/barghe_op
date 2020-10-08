@@ -154,7 +154,6 @@ typedef struct UIScene {
   cereal::ThermalData::NetworkStrength networkStrength;
   std::string wifiIpAddress;
 
-
   int batteryPercent;
   bool batteryCharging;
   float freeSpace;
