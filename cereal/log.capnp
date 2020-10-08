@@ -287,7 +287,6 @@ struct ThermalData {
   networkStrength @24 :NetworkStrength;
   wifiIpAddress @25 :Text;
 
-
   fanSpeed @10 :UInt16;
   started @11 :Bool;
   startedTs @13 :UInt64;
