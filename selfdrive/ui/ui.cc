@@ -516,7 +516,6 @@ void handle_message(UIState *s,  Message* msg) {
     s->preview_started = data.getIsPreview();
   }
 
-
   s->started = s->thermal_started || s->preview_started ;
   // Handle onroad/offroad transition
   if (!s->started) {
