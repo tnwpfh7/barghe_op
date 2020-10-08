@@ -43,7 +43,7 @@ class CarInterface(CarInterfaceBase):
       ret.steerRateCost = 0.5
       ret.steerLimitTimer = 0.5
       ret.lateralTuning.pid.kiBP, ret.lateralTuning.pid.kpBP = [[0.], [0.]]
-      ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.06, 0.16], [0.03, 0.05]]
+      ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.08, 0.16], [0.03, 0.05]]
       ret.minSteerSpeed = -0 * CV.MPH_TO_MS
     elif candidate in [CAR.KIA_K7_HEV]:
       ret.lateralTuning.pid.kf = 0.00005
