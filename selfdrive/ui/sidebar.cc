@@ -71,10 +71,8 @@ static void ui_draw_sidebar_network_type(UIState *s) {
   nvgTextAlign(s->vg, NVG_ALIGN_CENTER | NVG_ALIGN_MIDDLE);
   nvgTextBox(s->vg, network_x, network_y, network_w, network_type ? network_type : "--", NULL);
 
-  nvgFontSize(s->vg, 40);
   nvgTextBox(s->vg, network_x-20, network_y + 55, 250, s->scene.wifiIpAddress.c_str(), NULL);
 }
-
 
 static void ui_draw_sidebar_metric(UIState *s, const char* label_str, const char* value_str, const int severity, const int y_offset, const char* message_str) {
   const int metric_x = !s->scene.uilayout_sidebarcollapsed ? 30 : -(sbr_w);
@@ -152,6 +150,7 @@ static void ui_draw_sidebar_metric2(UIState *s, const int severity, const int y_
     nvgTextBox(s->vg, metric_x + 35, metric_y + (strchr(message_str, '\n') ? 40 : 50), metric_w - 50, message_str, NULL);
 }
 
+
 static void ui_draw_sidebar_temp_metric(UIState *s) {
   static std::map<cereal::ThermalData::ThermalStatus, const int> temp_severity_map = {
       {cereal::ThermalData::ThermalStatus::GREEN, 0},
@@ -168,7 +167,7 @@ static void ui_draw_sidebar_temp_metric(UIState *s) {
   temp_label_str[0] = 0;
   strcat(temp_value_str, temp_value_unit);
 
-  ui_draw_sidebar_metric2(s, temp_label_str, temp_value_str, temp_severity_map[s->scene.thermalStatus], temp_y_offset, temp_value_str);
+  ui_draw_sidebar_metric2(s, temp_severity_map[s->scene.thermalStatus], temp_y_offset, temp_value_str);
 }
 
 static void ui_draw_sidebar_panda_metric(UIState *s) {
