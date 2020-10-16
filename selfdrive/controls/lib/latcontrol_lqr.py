@@ -33,9 +33,6 @@ class LatControlLQR():
     self.output_steer = 0.0
     self.sat_count = 0.0
 
-    if self.x_hat[0][0] != 0. or self.x_hat[1][0] != 0.:
-      self.x_hat = np.array([[0], [0]])
-
   def _check_saturation(self, control, check_saturation, limit):
     saturated = abs(control) == limit
 
