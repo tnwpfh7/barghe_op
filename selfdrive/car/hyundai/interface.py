@@ -38,12 +38,12 @@ class CarInterface(CarInterfaceBase):
       ret.lateralTuning.pid.kf = 0.00005
       ret.mass = 1685. + STD_CARGO_KG
       ret.wheelbase = 2.855
-      ret.steerRatio = 12.72   #Spec 14.4
+      ret.steerRatio = 12.55   #Spec 14.4
       ret.steerActuatorDelay = 0.18
       ret.steerRateCost = 0.5
       ret.steerLimitTimer = 0.5
       ret.lateralTuning.pid.kiBP, ret.lateralTuning.pid.kpBP = [[0.], [0.]]
-      ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.08, 0.16], [0.03, 0.05]]
+      ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.07], [0.04]]
       ret.minSteerSpeed = -0 * CV.MPH_TO_MS
     elif candidate in [CAR.KIA_K7_HEV]:
       ret.lateralTuning.pid.kf = 0.00005
