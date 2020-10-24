@@ -134,8 +134,8 @@ class CarInterface(CarInterfaceBase):
       tire_stiffness_factor = 0.385
     elif candidate in [CAR.CADENZA, CAR.CADENZA_HEV]:
       tire_stiffness_factor = 0.6
-      ret.mass = 1640. + STD_CARGO_KG
-      ret.wheelbase = 2.845
+      ret.mass = 1685. + STD_CARGO_KG
+      ret.wheelbase = 2.855
 
 
 
@@ -143,7 +143,7 @@ class CarInterface(CarInterfaceBase):
 
     ret.lateralTuning.init('lqr')
 
-    ret.lateralTuning.lqr.scale = 1500.0
+    ret.lateralTuning.lqr.scale = 1800.0
     ret.lateralTuning.lqr.ki = 0.01
 
     ret.lateralTuning.lqr.a = [0., 1., -0.22619643, 1.21822268]
@@ -151,16 +151,16 @@ class CarInterface(CarInterfaceBase):
     ret.lateralTuning.lqr.c = [1., 0.]
     ret.lateralTuning.lqr.k = [-110., 451.]
     ret.lateralTuning.lqr.l = [0.33, 0.318]
-    ret.lateralTuning.lqr.dcGain = 0.0027
+    ret.lateralTuning.lqr.dcGain = 0.00255
 
-    ret.steerRatio = 13.0
-    ret.steerActuatorDelay = 0.25
-    ret.steerLimitTimer = 2.5
+    ret.steerRatio = 13.5
+    ret.steerActuatorDelay = 0.18
+    ret.steerLimitTimer = 0.8
 
-    ret.steerRateCost = 0.55
+    ret.steerRateCost = 0.5
 
     ret.steerMaxBP = [0.]
-    ret.steerMaxV = [1.5]
+    ret.steerMaxV = [1.1]
 
 
 
