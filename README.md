@@ -1,3 +1,9 @@
+BARGHE OPENPILOT HKG BARGHE N 0.7.10
+======
+This Branch is Neokii HKG_0710 Base
+1. nTune 1.2.1 - Neokii
+2. LQR Control
+
 HKG Community information
 ======
 
