@@ -11,6 +11,8 @@ if [ ! -f "/system/fonts/opensans_regular.ttf" ]; then
     chmod 644 /system/etc/fonts.xml
   	chmod 644 /system/fonts/opensans_*
 
+	cp /data/openpilot/installer/bootanimation.zip /system/media/
+
     mount -o ro,remount /system
 fi
 
