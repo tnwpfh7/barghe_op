@@ -51,6 +51,11 @@ def create_lkas11(packer, frame, car_fingerprint, apply_steer, steer_req,
     values["CF_Lkas_FcwOpt_USM"] = 2 if enabled else 1
     values["CF_Lkas_SysWarning"] = 4 if sys_warning else 0
 
+  elif car_fingerprint in [CAR.K7, CAR.K7_HEV]:
+    values["CF_Lkas_Bca_R"] = 0
+    values["CF_Lkas_FcwOpt_USM"] = 1
+    values["CF_Lkas_LdwsOpt_USM"] = 3
+
   if FEATURES["use_ldws"]:
     values["CF_Lkas_LdwsOpt_USM"] = 3
 
