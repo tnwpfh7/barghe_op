@@ -135,7 +135,6 @@ class CarInterface(CarInterfaceBase):
 
 
     ret.lateralTuning.init('lqr')
-
     ret.lateralTuning.lqr.scale = 1900.0
     ret.lateralTuning.lqr.ki = 0.01
     ret.lateralTuning.lqr.dcGain = 0.003
@@ -149,12 +148,10 @@ class CarInterface(CarInterfaceBase):
     ret.steerRatio = 14.4
     ret.steerActuatorDelay = 0.1
     ret.steerLimitTimer = 0.8
-
     ret.steerRateCost = 0.5
 
     ret.steerMaxBP = [0.]
-    ret.steerMaxV = [1.3]
-
+    ret.steerMaxV = [1.1]
 
 
     ret.centerToFront = ret.wheelbase * 0.4
