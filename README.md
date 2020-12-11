@@ -1,9 +1,11 @@
 BARGHE OPENPILOT HKG N 0.7.10
 ======
 This Branch is Neokii HKG_0710 Base
-1. nTune 1.2.1 - Neokii
+1. nTune 1.2.3 - Neokii
 2. LQR Control
 3. Shutdown: 3 minute
+4. BARGHE intro animation
+5. System Fonts KO-KR
 
 HKG Community information
 ======
