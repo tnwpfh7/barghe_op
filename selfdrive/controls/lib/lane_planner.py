@@ -3,7 +3,7 @@ import numpy as np
 from cereal import log
 from selfdrive.ntune import ntune_get
 
-CAMERA_OFFSET = 0.06  # m from center car to camera
+CAMERA_OFFSET = 0.11  # m from center car to camera
 
 
 def compute_path_pinv(length=50):
